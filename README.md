@@ -36,7 +36,7 @@ Sigue estos pasos para ejecutar el proyecto en tu máquina local:
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu-usuario/pizzeria-app.git
+   git clone https://github.com/AaronDevCode/app-pizzeria.git
    ```
 
 2. Navega al directorio del proyecto:
