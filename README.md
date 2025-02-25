@@ -65,4 +65,4 @@ Este proyecto está bajo la licencia **MIT**. Para más detalles, consulta el ar
 
 ## Autor
 
-- **Aaron Ochoa Ramirez** - [Enlace a tu perfil de GitHub](https://github.com/AaronDevCode)
+- **Aaron Ochoa Ramirez** - [Enlace de GitHub](https://github.com/AaronDevCode)
