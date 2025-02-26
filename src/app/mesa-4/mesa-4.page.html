@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mesa 4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Seleccione su Pizza</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-select [(ngModel)]="pizza" label="Elija una opción" label-placement="floating">
+          <ion-select-option value="Pepperoni">Pepperoni</ion-select-option>
+          <ion-select-option value="Hawaiana">Hawaiana</ion-select-option>
+          <ion-select-option value="Carnes Frias">Carnes Frías</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button expand="block" color="success" shape="round" (click)="ordenarPizza()">
+        Ordenar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Lista de Pedidos -->
+  <h2 class="ion-padding">Mis Pedidos</h2>
+  <ion-list>
+    <ion-item-sliding *ngFor="let pedido of pizzaMesaCuatro">
+      <ion-item>
+        <!-- Icono de pizza en color verde -->
+        <ion-icon name="pizza" slot="start" color="warning"></ion-icon>
+        <ion-label>
+          <h3>{{pedido.pizza}}</h3>
+          <p>Pedido: {{pedido.id}}</p>
+        </ion-label>
+        <p slot="end">Mesa: 4</p>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="eliminarPedido(pedido)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

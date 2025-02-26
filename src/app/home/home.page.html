@@ -1,20 +1,102 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar color="success">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Pizzería TIDSM</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Resumen de pizzas -->
+  <ion-card class="summary-card ion-text-center">
+    <ion-card-header>
+      <ion-icon name="pizza" size="large" color="success"></ion-icon>
+      <ion-card-title>Pizzas ordenadas :</ion-card-title>
+      <ion-card-subtitle class="ion-text-bold" color="success">{{ totalPedidos }}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Grid Layout para las mesas -->
+  <ion-grid>
+    <ion-row>
+      <!-- Mesa 1 -->
+      <ion-col size="6">
+        <ion-card>
+          <ion-item lines="none">
+            <ion-icon name="restaurant" slot="start" color="success" style="font-size: 24px;"></ion-icon>
+            <ion-label>
+              <h2>Mesa 1</h2>
+              <p>Pedidos: {{ totalPedidosMesa1 }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-button expand="block" color="success" fill="outline" shape="round" routerLink="/mesa-1">
+            Ver
+          </ion-button>
+        </ion-card>
+      </ion-col>
+
+      <!-- Mesa 2 -->
+      <ion-col size="6">
+        <ion-card>
+          <ion-item lines="none">
+            <ion-icon name="restaurant" slot="start" color="primary" style="font-size: 24px;"></ion-icon>
+            <ion-label>
+              <h2>Mesa 2</h2>
+              <p>Pedidos: {{ totalPedidosMesa2 }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-button expand="block" color="success" fill="outline" shape="round" routerLink="/mesa-2">
+            Ver
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!-- Mesa 3 -->
+      <ion-col size="6">
+        <ion-card>
+          <ion-item lines="none">
+            <ion-icon name="restaurant" slot="start" color="danger" style="font-size: 24px;"></ion-icon>
+            <ion-label>
+              <h2>Mesa 3</h2>
+              <p>Pedidos: {{ totalPedidosMesa3 }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-button expand="block" color="success" fill="outline" shape="round" routerLink="/mesa-3">
+            Ver
+          </ion-button>
+        </ion-card>
+      </ion-col>
+
+      <!-- Mesa 4 -->
+      <ion-col size="6">
+        <ion-card>
+          <ion-item lines="none">
+            <ion-icon name="restaurant" slot="start" color="warning" style="font-size: 24px;"></ion-icon>
+            <ion-label>
+              <h2>Mesa 4</h2>
+              <p>Pedidos: {{ totalPedidosMesa4 }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-button expand="block" color="success" fill="outline" shape="round" routerLink="/mesa-4">
+            Ver
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

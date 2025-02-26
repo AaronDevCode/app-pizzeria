@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'mesa-1',
+    loadChildren: () => import('./mesa-1/mesa-1.module').then( m => m.Mesa1PageModule)
+  },
+  {
+    path: 'mesa-2',
+    loadChildren: () => import('./mesa-2/mesa-2.module').then( m => m.Mesa2PageModule)
+  },
+  {
+    path: 'mesa-3',
+    loadChildren: () => import('./mesa-3/mesa-3.module').then( m => m.Mesa3PageModule)
+  },
+  {
+    path: 'mesa-4',
+    loadChildren: () => import('./mesa-4/mesa-4.module').then( m => m.Mesa4PageModule)
+  },
 ];
 
 @NgModule({
